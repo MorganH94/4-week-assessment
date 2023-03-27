@@ -1,5 +1,6 @@
 const complimentBtn = document.getElementById("complimentButton")
-const complimentNewBtn = document.getElementById("complimentButton")
+const complimentNewBtn = document.getElementById("newComplimentButton")
+
 
 const getCompliment = () => {
     axios.get("http://localhost:4000/api/compliment/")
@@ -15,6 +16,7 @@ const getNewCompliment = () => {
             alert(data);
     });
 };
+
 
 complimentBtn.addEventListener('click', getCompliment)
 complimentNewBtn.addEventListener('click', getNewCompliment)
